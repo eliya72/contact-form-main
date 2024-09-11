@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  <!-- <div class="toast__message">✅ Submitted. We'll be in touch soon!</div> -->
+  <div class="container__form">
+    <form id="form__wrapper" name="my-form" method="POST">
+    <h1>Contact Us</h1>
+    <!-- <div class="all__gap__form"> -->
+    <div class="first__hor__bar">
+      <div class="first__column">
+        <label for="first__name">First Name *</label>
+        <input type="text" id="first__name" name="FirstName" pattern="[\p{L}\s]+" required/>
+      </div>
+      <div class="second__column">
+        <label for="second__name">Second Name *</label>
+        <input id="second__name" type="text" name="SecondName" pattern="[\p{L}\s]+" required />
+      </div>
+    </div>
+    <label for="email" id="label__for__email">Email Address *</label>
+    <input id="email" type="email" name="Email" required autocomplete="on" />
+    <p class="query__text">Query Type *</p>
+    <div class="second__hor__bar">
+      <div class="third__column">
+        <label for="general__enquiry">General Enquiry </label>
+        <input type="radio" id="general__enquiry" value="general enquiry" name="QueryType" required />
+      </div>
+      <div class="forth__column">
+        <label for="support__request">Support Request</label>
+        <input type="radio" id="support__request" value="support request" name="QueryType" required />
+      </div>
+    </div>
+    <label for="message" id="label__for__message">Message *</label>
+    <textarea id="message" name="Message"></textarea>
+    <div class="i__consent__to">
+      <input type="checkbox" id="i__consent" required >
+      <label for="i__consent">I consent to being contracted by the team *</label>
+    </div>
+    <input type="submit" value="Submit" class="submit__button" name="submit">
+    <!-- </div> -->
+    </form>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/eliya72">EL</a>.
+  </div>
+  <script src="/js/index.js" async defer></script>
+</body>
+</html>

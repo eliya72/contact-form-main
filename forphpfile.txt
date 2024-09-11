@@ -1,0 +1,25 @@
+<?php
+    if (isset($_POST['Email']) && $_POST['Email'] != ''){
+        if (filter_var($_POST['Email'], FILTER_VALIDATE_EMAIL)) {
+            $FirstName = $_POST['FirstName'];
+            $SecondName= $_POST['SecondName'];
+            $Email= $_POST['Email'];
+            $QueryType= $_POST['QueryType'];
+            $Message= $_POST['Message']; 
+
+            $to = "this.is.my.test.mail2024@gmail.com";
+            $subject = "New Message from Contact Form";
+            $headers = "From: $Email";
+            
+            $txt ="First name = ". $FirstName . "\r\nSecond Name = " . $SecondName . "\r\nEmail = " . $Email . "\r\nQuery Type = " . $QueryType . "\r\nMessage = " . $Message;
+
+            echo "I'm working";
+
+            if (mail($to, $subject, $txt, $headers)) {
+                echo "Thank you! Your message has been sent.";
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            } 
+        }  
+    }
+?>
